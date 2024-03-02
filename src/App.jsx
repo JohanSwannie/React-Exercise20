@@ -43,7 +43,7 @@ function App() {
                   <td>{item.fullname}</td>
                   <td>{item.age}</td>
                   <td>{item.career}</td>
-                  <td>{item.salary}</td>
+                  <td>${item.salary}</td>
                 </tr>
               ))}
           </tbody>
