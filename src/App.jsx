@@ -21,6 +21,33 @@ function App() {
             />
           </InputGroup>
         </Form>
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>Full Name</th>
+              <th>Age</th>
+              <th>Career</th>
+              <th>Salary</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data
+              .filter((item) => {
+                return search.toLocaleLowerCase() === ""
+                  ? item
+                  : item.fullname.toLocaleLowerCase().includes(search);
+              })
+              .sort((a, b) => (a.fullname > b.fullname ? 1 : -1))
+              .map((item, index) => (
+                <tr key={index}>
+                  <td>{item.fullname}</td>
+                  <td>{item.age}</td>
+                  <td>{item.career}</td>
+                  <td>{item.salary}</td>
+                </tr>
+              ))}
+          </tbody>
+        </Table>
       </Container>
     </div>
   );
