@@ -13,7 +13,7 @@ function App() {
           List of Family Members and Friends
         </h1>
         <Form>
-          <InputGroup>
+          <InputGroup className="my-2">
             <Form.Control
               onChange={(event) => setSearch(event.target.value)}
               placeholder="Search for people"
@@ -21,7 +21,7 @@ function App() {
             />
           </InputGroup>
         </Form>
-        <Table striped bordered hover>
+        <Table striped bordered hover className="border-2 border-slate-300">
           <thead>
             <tr>
               <th>Full Name</th>
