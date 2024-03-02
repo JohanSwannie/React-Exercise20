@@ -1,35 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Form, InputGroup, Table } from "react-bootstrap";
+import { data } from "./inputData.js";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [search, setSearch] = useState("");
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <Container>
+        <h1 className="text-center text-3xl mt-2 mb-8 h-5">
+          List of Family Members and Friends
+        </h1>
+        <Form>
+          <InputGroup>
+            <Form.Control
+              onChange={(event) => setSearch(event.target.value)}
+              placeholder="Search for people"
+              className="placeholder-gray-950 placeholder-opacity-35"
+            />
+          </InputGroup>
+        </Form>
+      </Container>
+    </div>
+  );
 }
 
-export default App
+export default App;
