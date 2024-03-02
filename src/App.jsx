@@ -38,8 +38,8 @@ function App() {
                   : item.fullname.toLocaleLowerCase().includes(search);
               })
               .sort((a, b) => (a.fullname > b.fullname ? 1 : -1))
-              .map((item, index) => (
-                <tr key={index}>
+              .map((item, idx) => (
+                <tr key={idx}>
                   <td>{item.fullname}</td>
                   <td>{item.age}</td>
                   <td>{item.career}</td>
