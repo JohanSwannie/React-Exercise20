@@ -9,9 +9,9 @@ function App() {
   return (
     <div>
       <Container>
-        <h1 className="text-center text-3xl mt-2 mb-8 h-5">
+        <h3 className="text-center text-2xl mt-2 mb-8 h-5">
           List of Family Members and Friends
-        </h1>
+        </h3>
         <Form>
           <InputGroup className="my-2">
             <Form.Control
