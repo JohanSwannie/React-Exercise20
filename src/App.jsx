@@ -32,11 +32,11 @@ function App() {
           </thead>
           <tbody>
             {data
-              .filter((item) => {
-                return search.toLocaleLowerCase() === ""
+              .filter((item) =>
+                search.toLocaleLowerCase() === ""
                   ? item
-                  : item.fullname.toLocaleLowerCase().includes(search);
-              })
+                  : item.fullname.toLocaleLowerCase().includes(search)
+              )
               .sort((a, b) => (a.fullname > b.fullname ? 1 : -1))
               .map((item, idx) => (
                 <tr key={idx}>
