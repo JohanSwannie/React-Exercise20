@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Form, InputGroup, Table } from "react-bootstrap";
+import { Container, Form, InputGroup, Table, Button } from "react-bootstrap";
 import { data } from "./inputData.js";
 
 function App() {
@@ -9,12 +9,13 @@ function App() {
   return (
     <div>
       <Container>
-        <h3 className="text-center text-2xl mt-2 mb-8 h-5">
+        <h3 className="text-center text-2xl mt-2 h-8">
           List of Family Members and Friends
         </h3>
         <Form>
           <InputGroup className="my-2">
             <Form.Control
+              type="search"
               onChange={(event) => setSearch(event.target.value)}
               placeholder="Search for people"
               className="placeholder-gray-950 placeholder-opacity-35"
