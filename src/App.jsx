@@ -18,7 +18,7 @@ function App() {
               type="search"
               onChange={(event) => setSearch(event.target.value)}
               placeholder="Search for people"
-              className="placeholder-gray-950 placeholder-opacity-35"
+              className="placeholder-gray-950 placeholder-opacity-35 p-3"
             />
           </InputGroup>
         </Form>
