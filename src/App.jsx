@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Form, InputGroup, Table, Button } from "react-bootstrap";
-import { data } from "./inputData.js";
+import { data } from "./inputData";
 
 function App() {
   const [search, setSearch] = useState("");
